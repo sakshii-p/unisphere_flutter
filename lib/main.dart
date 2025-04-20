@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 void main() => runApp(const MyApp());
@@ -238,7 +239,7 @@ class _UnisphereAppState extends State<UnisphereApp> {
   }
 
   Widget _infoView() {
-    const infoText = '''
+  const infoText = '''
 Dear Students,
 
 Jayawant Shikshan Prasarak Mandal (JSPM) and The Shetkari Shikshan Mandal Sangli, Pune (TSSM) have been established with the objective of creating centres of excellence for education in the field of Engineering, Medical, Pharmacy, Management, and Computing.
@@ -260,14 +261,29 @@ I hope you would be one of those fortunate students who would get admission to o
 My best wishes to you for all the success in your professional career after graduation.
 ''';
 
-    return const Padding(
-      padding: EdgeInsets.all(12.0),
+  return Padding(
+    padding: const EdgeInsets.all(15),
+    child: Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white10,
+        borderRadius: BorderRadius.circular(15),
+        border: Border.all(color: Colors.white24),
+      ),
       child: Text(
         infoText,
-        style: TextStyle(color: Colors.white, fontSize: 16, height: 1.5),
+        style: GoogleFonts.roboto(
+          textStyle: const TextStyle(
+            color: Colors.white,
+            fontSize: 16,
+            height: 1.6,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
       ),
-    );
-  }
+    ),
+  );
+}
 
   Widget _contactView() {
     return Padding(
